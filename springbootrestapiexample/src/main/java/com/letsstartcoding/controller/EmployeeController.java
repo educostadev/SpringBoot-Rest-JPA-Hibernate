@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.letsstartcoding.dao.EmployeeDAO;
 import com.letsstartcoding.model.Employee;
@@ -48,6 +49,14 @@ public class EmployeeController {
 			return ResponseEntity.ok().body(emp.get());
 		}
 		return ResponseEntity.notFound().build();
+	}
+	
+	@GetMapping
+	public ModelAndView listAll() {
+		List<Employee> all = employeeDAO.findAll();
+		ModelAndView modelView = new ModelAndView("employees");
+		modelView.addObject("employees", all);
+		return modelView;
 	}
 
 	/* update an employee by empid */
