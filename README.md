@@ -14,7 +14,7 @@ Further explanation on JPA annotation present in this sample can be found on [Sp
 
 - URL: http://localhost:8080/company
 
-![screenshot](C:\Projetos\SpringBoot-Rest-JPA-Hibernate\screenshot.jpg)
+![screenshot](screenshot.jpg)
 
 ## Tools 
 
