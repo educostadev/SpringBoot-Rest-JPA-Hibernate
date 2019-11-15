@@ -1,9 +1,9 @@
 # SpringBoot-Rest-JPA-Hibernate
-Sample of CRUD application using Spring Boot + Spring MVC + Restful API + JPA / Hibernate 
+Sample of a CRUD application using Spring Boot + Spring MVC + Restful API + JPA / Hibernate 
 
-The original tutorial for this sample is available on [Youtube](https://www.youtube.com/watch?v=DCZOchCX10s) and on [author´s github](https://github.com/varuncbv/SpringBootRestAPIHibernateJPAMYSQLTutorial/), the sample in this repository has some changes to make it up to date with:
+The original tutorial for this sample is available on [Youtube](https://www.youtube.com/watch?v=DCZOchCX10s) and at [author´s github](https://github.com/varuncbv/SpringBootRestAPIHibernateJPAMYSQLTutorial/), the sample in this repository has some changes to make it up to date with:
 
-- OracleXE
+- OracleXE or SQLServer 
 - Hirakari Connection Pool 3.3.1
 - Spring Boot 2.13
 - [Thymeleaf](https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/) [[pt-br tutorial](https://blog.algaworks.com/thymeleaf/)]
@@ -12,14 +12,13 @@ Further explanation on JPA annotation present in this sample can be found on [Sp
 
 ## Screenshot
 
-- URL: http://localhost:8080/company
+- URL: http://localhost:8181/company  
 
 ![screenshot](screenshot.jpg)
 
-## Tools 
+## Useful Tools 
 
-- [Eclipse IDE](https://www.eclipse.org/downloads/packages/)
-- [Postman](https://www.getpostman.com/downloads/)
+- [Postman](https://www.getpostman.com/downloads/) or [Insomnia](https://insomnia.rest)
 
 ## Snippets
 
@@ -32,8 +31,26 @@ grant analyze any to exampledb;
 GRANT DBA TO exampledb;
 ```
 
-### Post Request to add a employee
+## REST API
 
+### LIST ALL
+- GET http://{ur}:{port}/company/employees
+
+### LIST by id
+
+- http://{url}:{port}/company/employees/{id}
+
+### UPDATE
+
+- PUT  http://{ur}:{port}/company/employees/{id} + JSON BODY
+
+### DELETE
+
+- DELETE  http://{ur}:{port}/company/employees/{id}
+
+### CREATE
+
+- POST  http://{ur}:{port}/company/employees
 - Options to choose on postman: POST / raw / JSON (application/json)
 
 ````
